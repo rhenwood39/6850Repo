@@ -17,7 +17,7 @@ public class Twitter {
 	private static final String FEATNAME_DIR = "/home/rhenwood39/Documents/cs6850/reaction/twitter2.0/featnames";
 	private static final String SAME_WORD_EDGES = "/home/rhenwood39/Documents/cs6850/reaction/twitter2.0/sameWordEdges.txt";
 	private static final String LEFT_SEED = "#obama2012";
-	private static final String RIGHT_SEED =  "#teaparty";
+	private static final String RIGHT_SEED =  "#gop2012";
 
 	// update counts and add new words to cand
 	public static int addAll(HashSet<String> seedWords, HashMap<String, Integer> cand, HashSet<String> words) {
@@ -156,7 +156,7 @@ public class Twitter {
 			Set<String> lKeys = leftCand.keySet();
 			for (String key : lKeys) {
 				double jaccard = (1.0 * leftCand.get(key)) / (lCount + lCounts.get(key) - leftCand.get(key));
-				if (jaccard >= 0.035) {
+				if (jaccard >= 0.04) {
 					leftWords.add(key);
 				}
 			}			
@@ -164,7 +164,7 @@ public class Twitter {
 			Set<String> rKeys = rightCand.keySet();
 			for (String key : rKeys) {
 				double jaccard = (1.0 * rightCand.get(key)) / (rCount + rCounts.get(key) - rightCand.get(key));
-				if (jaccard >= 0.035) {
+				if (jaccard >= 0.04) {
 					rightWords.add(key);
 				}
 			}
