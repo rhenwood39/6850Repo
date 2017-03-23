@@ -13,9 +13,12 @@ import java.util.Set;
 
 public class Twitter {
 
-	private static final String FEAT_DIR = "/home/rhenwood39/Documents/cs6850/reaction/twitter2.0/feat";
-	private static final String FEATNAME_DIR = "/home/rhenwood39/Documents/cs6850/reaction/twitter2.0/featnames";
-	private static final String SAME_WORD_EDGES = "/home/rhenwood39/Documents/cs6850/reaction/twitter2.0/sameWordEdges.txt";
+
+	private static final String CURRENT_FILE_PATH = new File("").getAbsolutePath();
+
+	private static final String FEAT_DIR = CURRENT_FILE_PATH + "/twitter2.0/feat";
+	private static final String FEATNAME_DIR = CURRENT_FILE_PATH + "/twitter2.0/featnames";
+	private static final String SAME_WORD_EDGES = CURRENT_FILE_PATH + "/twitter2.0/sameWordEdges.txt";
 	private static final String LEFT_SEED = "#obama2012";
 	private static final String RIGHT_SEED =  "#teaparty";
 
