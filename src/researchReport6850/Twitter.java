@@ -178,17 +178,6 @@ public class Twitter {
 		// compute similarity
 		/////////////////////////////////////////////////////////////////////////////
 		
-		//remove words that appear in both sets
-		HashSet<String> toRemove = new HashSet<>();
-		for (String word : leftWords) {
-			if (rightWords.contains(word))
-				toRemove.add(word);
-		}
-		for (String word : toRemove) {
-			leftWords.remove(word);
-			rightWords.remove(word);
-		}
-		
 		HashSet<String> liberals = new HashSet<>();
 		HashSet<String> conservatives = new HashSet<>();
 		
